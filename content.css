@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap'); /* Import Space Grotesk font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap'); /* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@700&display=swap'); /* Import Satoshi font */
+
+/* Reset default browser styles and set base font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif; /* Default font for all elements */
+}
+
+/* Body styles: set background image and general text styles */
+
+/* Navigation bar styles */
+nav {
+  background-color: #4e4e4e38;                /* Slightly darker gray for navbar */
+  padding: 1rem 2rem;                       /* Space inside navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);/* Subtle shadow for depth */
+  display: flex;                            /* Flex layout for nav content */
+  justify-content: space-between;           /* Space between logo and links */
+  align-items: center;                      /* Vertically center items */
+  position: sticky;                         /* Stick navbar to top on scroll */
+  top: 0;
+  z-index: 1000;                            /* Keep navbar above other content */
+}
+
+/* Logo styles inside navbar */
+nav .logo {
+  font-size: 1.5rem;                        /* Larger font for logo */
+  font-weight: 600;                         /* Bold logo */
+}
+
+nav .logo:hover {
+  cursor: pointer;   
+  color:#eaf6fd                        /* Change cursor to pointer on hover */
+}
+
+/* Navigation links list styles */
+nav ul {
+  list-style: none;                         /* Remove bullet points */
+  display: flex;                            /* Horizontal layout */
+  gap: 1.5rem;                              /* Space between links */
+}
+
+/* Navigation link styles */
+nav ul li a {
+  text-decoration: none;                    /* Remove underline */
+  color: #333;                              /* Link color */
+  transition: color 0.3s ease;              /* Smooth color transition on hover */
+}
+
+/* Navigation link hover effect */
+nav ul li a:hover {
+  color: #eaf6fd;                           /* Change color on hover */
+}
+
+/* Header section styles */
+header {
+  display: flex;                /* Use flexbox for alignment */
+  flex-direction: column;       /* Stack children vertically */
+  justify-content: center;      /* Center vertically in available space */
+  align-items: center;          /* Center content horizontally */
+  min-height: 40vh;             /* Take up at least 40% of viewport height */
+  padding: 4rem 2rem;           /* Space around header */
+  margin: 0 auto;               /* Center header with the page */
+  text-align: center;           /* Center text */
+  margin-top: 10rem;             /* Space from the top */
+}
+
+/* Main header (h1) styles */
+header h1 {
+  font-size: 5rem;                          /* Large font size for main title */
+  margin-bottom: 0rem;                      /* Space below h1 */
+  text-shadow: 2px 4px 12px rgba(255, 255, 255, 0.863); /* Light shadow for depth */
+  color: #ffffff;                           /* White text color */
+  font-family: 'Manrope', sans-serif; /* Use Satoshi font for header */
+  outline: #000000;
+  outline-width: 2rem;
+}
+
+/* Section styles for main content */
+section {
+  padding: 2rem;                            /* Space inside section */
+  max-width: 800px;                         /* Limit section width */
+  margin: auto;                             /* Center section */
+}
+
+/* Footer styles */
+footer {
+  text-align: center;                       /* Center footer text */
+  padding: 7rem;                            /* Space inside footer */
+  color: #888;  
+  margin-top: 1rem;                            /* Lighter text color */
+}
+
+#background-video {
+  width: 100vw;         /* Full viewport width */
+  height: 60vh;         /* Height of the video section */
+  object-fit: cover;    /* Cover the area */
+  display: block;
+}

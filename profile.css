@@ -1,78 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap'); /* Import Space Grotesk font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap'); /* Import Inter font */
 
-/* styles.css */
+/* Reset default browser styles and set base font */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', sans-serif; /* Default font for all elements */
 }
 
+/* Body styles: set background image and general text styles */
 body {
-  background-color: #ededed; /* light gray background */
-  color: #333;
-  line-height: 1.6;
+  background-image: url('landingpage.jpg'); /* Set background image */
+  background-size: cover;                   /* Cover entire viewport */
+  background-position: center -250px;       /* Shift image up to crop top */
+  background-repeat: no-repeat;             /* Prevent image tiling */
+  background-attachment: fixed;             /* Keep background fixed on scroll */
+  color: #333;                              /* Default text color */
+  line-height: 1.6;                         /* Improve readability */
 }
 
+/* Navigation bar styles */
 nav {
-  background-color: #bdbdbd; /* slightly darker gray for navbar */
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
+  background-color: #2b262623;                /* Slightly darker gray for navbar */
+  padding: 1rem 2rem;                       /* Space inside navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);/* Subtle shadow for depth */
+  display: flex;                            /* Flex layout for nav content */
+  justify-content: space-between;           /* Space between logo and links */
+  align-items: center;                      /* Vertically center items */
+  position: sticky;                         /* Stick navbar to top on scroll */
   top: 0;
-  z-index: 1000;
+  z-index: 1000;     
+                         /* Keep navbar above other content */
 }
 
+/* Logo styles inside navbar */
 nav .logo {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.5rem;                        /* Larger font for logo */
+  font-weight: 600;                         /* Bold logo */
 }
 
+/* Navigation links list styles */
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  list-style: none;                         /* Remove bullet points */
+  display: flex;                            /* Horizontal layout */
+  gap: 1.5rem;                             /* Space between links */
 }
 
+/* Navigation link styles */
 nav ul li a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
+  text-decoration: none;                    /* Remove underline */
+  color: #333;                              /* Link color */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+
 }
 
+/* Navigation link hover effect */
 nav ul li a:hover {
-  color: #0077cc;
+  color: #eaf6fd;                           /* Change color on hover */
 }
 
+/* Header section styles */
 header {
-  padding: 4rem 2rem;
-  text-align: left; /* Align header content to the left */
-  margin-left: 40px; /* Optional: add some space from the left edge */
+  /* Center header vertically and align to the left side */
+  display: flex;                /* Use flexbox for alignment */
+  flex-direction: column;       /* Stack children vertically */
+  justify-content: center;      /* Center vertically in available space */
+  align-items: flex-start;      /* Align content to the left */
+  min-height: 60vh;             /* Take up at least 60% of viewport height */
+  padding: 4rem 2rem;           /* Space around header */
+  margin-left: 15vw;             /* Space from the left edge (responsive) */
+  text-align: left;      
+  margin-top: 11rem;  
+       /* Ensure text is left-aligned */
 }
 
+/* Main header (h1) styles */
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 5rem;                          /* Large font size for main title */
+  margin-bottom: 0rem;    /* Space below h1 */
+  text-shadow: 2px 4px 8px rgb(94, 92, 92), /* light shadow for depth */
+  0px 2px 8px rgba(0, 0, 0, 0.25); 
+  color: #ffffff;                              /* Dark text color */ 
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  outline: #000000;
+  outline-width: 2rem; /* Use Space Grotesk font */                 
 }
 
+/* Header paragraph styles */
 header p {
-  font-size: 1.25rem;
-  color: #555;
-  font-family: 'Inter', Arial, sans-serif; /* Use Inter font for header paragraph */
+  font-size: 3.15rem;                       /* Slightly larger text */
+  color: #ffffff;                              /* Softer text color */
+  font-family: 'Inter', Arial, sans-serif;
+  margin-bottom: 22rem;
+   text-shadow: 2px 4px 12px rgba(90, 90, 90, 0.863),
+  0px 2px 8px rgba(0, 0, 0, 0.25); /* Light shadow for depth */
+  margin-left: 5rem;  /* Use Inter font for header paragraph */
 }
 
+/* Section styles for main content */
 section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+  padding: 2rem;                            /* Space inside section */
+  max-width: 800px;                         /* Limit section width */
+  margin: auto;                             /* Center section */
 }
 
+/* Footer styles */
 footer {
-  text-align: center;
-  padding: 2rem;
-  color: #888;
+  text-align: center;                       /* Center footer text */
+  padding: 7rem;                            /* Space inside footer */
+  color: #888;  
+  margin-top: 1rem;                            /* Lighter text color */
 }
