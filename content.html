@@ -8,12 +8,8 @@
   <link rel="stylesheet" href="content.css">
 </head>
 <body>
-  <video autoplay muted loop id="background-video">
-    <source src="background video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
   <nav>
-    <div class="logo"onclick="window.location.href='index.html'">NATE TREAT</div>
+    <div class="logo" onclick="window.location.href='index.html'">NATE TREAT</div>
     <ul>
       <li>
         <a href="#about" onclick="window.location.href='content.html'; return false;">ABOUT</a>
@@ -24,15 +20,18 @@
     </ul>
   </nav>
 
+  <!-- Background video comes after the nav bar -->
+  <video autoplay muted loop id="background-video">
+    <source src="background video - Trim.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
   <header>
-    <h1>NATE TREAT</h1>
-    <p>PDX | TKY</p>
+    <h1>CONTENT</h1>
   </header>
 
   <footer>
     &copy; 2025 Nate Treat
   </footer>
-
-  <script src="content.css"></script>
 </body>
 </html>

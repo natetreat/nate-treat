@@ -95,8 +95,14 @@ footer {
 }
 
 #background-video {
-  width: 100vw;         /* Full viewport width */
-  height: 60vh;         /* Height of the video section */
-  object-fit: cover;    /* Cover the area */
-  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+  pointer-events: none;
 }
