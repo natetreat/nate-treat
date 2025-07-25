@@ -11,12 +11,11 @@
 
 /* Body styles: set background image and general text styles */
 body {
-  background-image: url('landingpage.jpg'); /* Set background image */
   background-size: cover;                   /* Cover entire viewport */
   background-position: center -250px;       /* Shift image up to crop top */
   background-repeat: no-repeat;             /* Prevent image tiling */
   background-attachment: fixed;             /* Keep background fixed on scroll */
-  color: #333;                              /* Default text color */
+  color: #ffffff;                              /* Default text color */
   line-height: 1.6;                         /* Improve readability */
 }
 
@@ -24,14 +23,13 @@ body {
 nav {
   background-color: #2b262623;                /* Slightly darker gray for navbar */
   padding: 1rem 2rem;                       /* Space inside navbar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);/* Subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);/* Subtle shadow for depth */
   display: flex;                            /* Flex layout for nav content */
   justify-content: space-between;           /* Space between logo and links */
   align-items: center;                      /* Vertically center items */
   position: sticky;                         /* Stick navbar to top on scroll */
   top: 0;
-  z-index: 1000;     
-                         /* Keep navbar above other content */
+  z-index: 1000;                            /* Keep navbar above other content */
 }
 
 /* Logo styles inside navbar */
@@ -50,15 +48,30 @@ nav ul {
 /* Navigation link styles */
 nav ul li a {
   text-decoration: none;                    /* Remove underline */
-  color: #333;                              /* Link color */
+  color: #ffffff;                              /* Link color */
   transition: color 0.3s ease; /* Smooth color transition on hover */
 
 }
 
 /* Navigation link hover effect */
 nav ul li a:hover {
-  color: #eaf6fd;                           /* Change color on hover */
+  color: #80cbf7;                           /* Change color on hover */
 }
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.5); /* Optional: dark overlay for better text visibility */
+}
+
 
 /* Header section styles */
 header {
@@ -66,11 +79,10 @@ header {
   display: flex;                /* Use flexbox for alignment */
   flex-direction: column;       /* Stack children vertically */
   justify-content: center;      /* Center vertically in available space */
-  align-items: flex-start;      /* Align content to the left */
+  align-items: center;          /* Align content to the left */
   min-height: 60vh;             /* Take up at least 60% of viewport height */
-  padding: 4rem 2rem;           /* Space around header */
-  margin-left: 15vw;             /* Space from the left edge (responsive) */
-  text-align: left;      
+  padding: 4rem 2rem;           /* Space around header */          /* Space from the left edge (responsive) */
+  text-align: center;      
   margin-top: 11rem;  
        /* Ensure text is left-aligned */
 }
@@ -79,7 +91,7 @@ header {
 header h1 {
   font-size: 5rem;                          /* Large font size for main title */
   margin-bottom: 0rem;    /* Space below h1 */
-  text-shadow: 2px 4px 8px rgb(94, 92, 92), /* light shadow for depth */
+  text-shadow: 2px 4px 8px rgb(187, 185, 185), /* light shadow for depth */
   0px 2px 8px rgba(0, 0, 0, 0.25); 
   color: #ffffff;                              /* Dark text color */ 
   font-family: 'Space Grotesk', Arial, sans-serif;
@@ -89,13 +101,13 @@ header h1 {
 
 /* Header paragraph styles */
 header p {
-  font-size: 3.15rem;                       /* Slightly larger text */
+  font-size: 2.1rem;                       /* Slightly larger text */
   color: #ffffff;                              /* Softer text color */
   font-family: 'Inter', Arial, sans-serif;
   margin-bottom: 22rem;
    text-shadow: 2px 4px 12px rgba(90, 90, 90, 0.863),
   0px 2px 8px rgba(0, 0, 0, 0.25); /* Light shadow for depth */
-  margin-left: 5rem;  /* Use Inter font for header paragraph */
+  margin-right: 2rem;
 }
 
 /* Section styles for main content */
