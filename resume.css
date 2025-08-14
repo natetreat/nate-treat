@@ -8,31 +8,126 @@
 /* Reset default browser styles and set base font */
 * {
   margin: 0;
+  /* Remove default margin */
   padding: 0;
+  /* Remove default padding */
   box-sizing: border-box;
+  /* Include padding and border in element's total width/height */
   font-family: 'Space Grotesk', sans-serif;
   /* Default font for all elements */
 }
-header {
-  display: flex;
-  /* Use flexbox for alignment */
-  flex-direction: column;
-  /* Stack children vertically */
-  justify-content: center;
-  /* Center vertically in available space */
-  align-items: center;
-  /* Center content horizontally */
-  min-height: 40vh;
-  /* Take up at least 40% of viewport height */
-  padding: 4rem 2rem;
-  /* Space around header */
-  margin: 0 auto;
-  /* Center header with the page */
-  text-align: center;
-  /* Center text */
-  margin-top: 10rem;
-  /* Space from the top */
+
+/* Body styles */
+body {
+  font-family: 'Inter', sans-serif;
+  /* Use Inter font for body text */
+  margin: 0;
+  padding: 0;
+  background-image: var(--bg-image);
+  /* Use the image variable */
+  background-size: cover;
+  /* Cover the viewport */
+  background-position: center;
+  background-position: fixed;
+  /* Fixed background position */
+  color: var(--text);
+  /* Use CSS variable for text color */
+  transition: background 0.3s, color 0.3s;
+  /* Smooth transition for dark/light mode */
 }
+
+:root {
+  --bg-image: url(lightmode.jpg);
+  /* Set image URL as a variable */
+  --text: #020202;
+  /* Default text color */
+  --primary: #0b3d91;
+  /* Primary accent color */
+  --link: #0b3d91;
+  /* Link color */
+}
+
+/* Dark mode styles */
+.dark-mode {
+  --bg-image: url(darkmode.JPG);
+  /* Dark mode background */
+  --text: #e0e0e0;
+  /* Dark mode text */
+  --primary: #81a1c1;
+  /* Dark mode primary */
+  --link: #88c0d0;
+  /* Dark mode link */
+}
+
+.container {
+  max-width: 900px;
+  /* Limit container width */
+  margin: auto;
+  /* Center container */
+  padding: 2rem;
+  /* Space inside container */
+}
+
+h1,
+h2 {
+  color: var(--primary);
+  /* Use primary color for headings */
+}
+
+.section {
+  margin-bottom: 2rem;
+  /* Space below each section */
+}
+
+.section h2 {
+  border-bottom: 2px solid #888;
+  /* Underline for section headings */
+  padding-bottom: 0.5rem;
+  /* Space below heading text */
+}
+
+ul {
+  list-style-type: disc;
+  /* Use disc bullets for lists */
+  padding-left: 1.5rem;
+  /* Indent list items */
+}
+
+.contact a {
+  color: var(--link);
+  /* Use link color for contact links */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+.toggle-btn,
+.mode-btn {
+  background: var(--primary);
+  /* Button background color */
+  color: rgb(250, 250, 250);
+  /* Button text color */
+  padding: 0.5rem 1rem;
+  /* Button padding */
+  border: none;
+  /* Remove border */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  margin-bottom: 1rem;
+  /* Space below button */
+}
+
+.hidden {
+  display: none;
+  /* Hide elements with this class */
+}
+
+.mode-toggle {
+  text-align: right;
+  /* Align toggle to right */
+  margin-bottom: 1rem;
+  /* Space below toggle */
+}
+
 
 /* Main header (h1) styles */
 header h1 {
@@ -47,12 +142,17 @@ header h1 {
   font-family: 'Manrope', sans-serif;
   /* Use Satoshi font for header */
   outline: #000000;
+  /* Outline color (not visible unless outline-style is set) */
   outline-width: 2rem;
+  /* Outline width (not visible unless outline-style is set) */
   margin-bottom: 0rem;
+  /* Space below h1 (duplicate, safe to remove) */
 }
+
+/* Navigation bar styles */
 nav {
   background-color: #4e4e4e38;
-  /* Slightly darker gray for navbar */
+  /* Slightly darker gray for navbar, semi-transparent */
   padding: 1rem 2rem;
   /* Space inside navbar */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -66,6 +166,7 @@ nav {
   position: sticky;
   /* Stick navbar to top on scroll */
   top: 0;
+  /* Align navbar to top */
   z-index: 1000;
   /* Keep navbar above other content */
 }
@@ -80,8 +181,9 @@ nav .logo {
 
 nav .logo:hover {
   cursor: pointer;
-  color: #eaf6fd
-    /* Change cursor to pointer on hover */
+  /* Show pointer cursor on hover */
+  color: #81a1c1
+    /* Change color on hover */
 }
 
 /* Navigation links list styles */
@@ -98,7 +200,7 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   /* Remove underline */
-  color: #333;
+  color: #ffffff;
   /* Link color */
   transition: color 0.3s ease;
   /* Smooth color transition on hover */
@@ -106,16 +208,56 @@ nav ul li a {
 
 /* Navigation link hover effect */
 nav ul li a:hover {
-  color: #eaf6fd;
+  color: #81a1c1;
   /* Change color on hover */
 }
 
-footer
-{
+/* Footer styles */
+footer {
   text-align: center;
   /* Center footer text */
   padding: 2rem;
   /* Space inside footer */
-  color: #ffffff; /* White text color */
-  position: relative; /* Position relative for stacking context */
+  color: #ffffff27;
+  /* White text color */
+  position: relative;
+  /* Position relative for stacking context */
+}
+
+body.dark-mode::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  /* Black overlay, 50% opacity */
+  z-index: 0;
+  /* Behind content, above background */
+  pointer-events: none;
+  /* Allow clicks through overlay */
+}
+
+/* Light mode overlay */
+body:not(.dark-mode)::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.699);
+  /* Light overlay, adjust opacity as needed */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Make sure your content is above the overlay */
+body,
+.container,
+nav,
+footer {
+  position: relative;
+  z-index: 1;
 }

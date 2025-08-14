@@ -1,33 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NATE TREAT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="resume.css">
+
 </head>
+
 <body>
   <nav>
-    <div class="logo"onclick="window.location.href='index.html'">NATE TREAT</div>
+    <div class="logo" onclick="window.location.href='index.html'">NATE TREAT</div>
     <ul>
       <li>
         <a href="#about" onclick="window.location.href='about.html'; return false;">ABOUT</a>
       </li>
-     <li><a href="#content" onclick="window.location.href='content.html'; return false;">CONTENT</a></li>
+      <li><a href="#content" onclick="window.location.href='content.html'; return false;">CONTENT</a></li>
       <li><a href="#contact" onclick="window.location.href='contact.html'; return false;">CONTACT</a></li>
-      <li><a href="#resume" onclick="window.location.href='resume.html'; return false;" >RESUME</a></li>
+      <li><a href="#resume" onclick="window.location.href='resume.html'; return false;">RESUME</a></li>
     </ul>
   </nav>
 
-  <header>
-    <h1>RESUME</h1>
-  </header>
+  <div class="container">
+    <div class="mode-toggle">
+      <button class="mode-btn" onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
+    <h1>Nathaniel M. Treat</h1>
+    <p class="contact">
+      Eugene, OR | (971) 202-6218 | <a href="mailto:ntreat@uoregon.edu">ntreat@uoregon.edu</a> |
+      <a href="https://linkedin.com/in/nate-treat-10bei" target="_blank">LinkedIn</a>
+    </p>
+
+    <div class="section">
+      <h2>Education</h2>
+      <p><strong>University of Oregon</strong> (Sep 2023 – Present)<br>
+        Accounting Major, Economics Minor<br>
+        GPA: 4.04 | Dean’s List | Apex Scholarship | Beta Alpha Psi Honors | SAGE Scholarship | Gilman Scholarship</p>
+    </div>
+
+    <div class="section">
+      <h2>Involvement</h2>
+      <div id="ama">
+        <p>
+          <strong>
+            <a href="https://www.ama.org/" target="_blank" style="color: rgb(49, 88, 196); text-decoration: underline;">
+              American Marketing Association
+            </a>
+          </strong>
+          (May 2024 – May 2025)
+        </p>
+        <p><em>VP of Finance</em></p>
+        <ul>
+          <li>Served as the club’s treasurer by purchasing items and creating ledgers, resulting in an organized
+            working space capable of serving students with guest speaker panels and workshops.</li>
+          <li>Worked collaboratively with the student government and club members to financially plan and
+            approve funding for a $30,000 club excursion to the AMA’s International Conference in New Orleans,
+            bringing real-world marketing insight to university students.</li>
+        </ul>
+      </div>
+      <div id="bap">
+        <p>
+          <strong>
+            <a href="https://www.bap.org/" target="_blank" style="color: rgb(184, 43, 39); text-decoration: underline;">
+              Beta Alpha Psi
+            </a>
+          </strong> (Mar 2025 – Present)
+        </p>
+        <p><em>Honors Member</em></p>
+        <ul>
+          <li>Actively participates in weekly accounting industry-related meetings, staying engaged
+            and informed with on campus resources.</li>
+          <li>Consistently seeks opportunities to visit company firms with BAP to stay connected
+            with professionals and build a professional portfolio.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <p><strong>Federal Express (FedEx)</strong> (Jul – Sep 2024)</p>
+      <p><em>Package Handler</em></p>
+      <ul>
+        <li>Demonstrated efficient ways to load and unload packages by using loading gear such as
+          load stands and conveyor belts, promoting a safer working environment.</li>
+        <li>Presented an open mind every day by actively looking for new opportunities at work and
+          filling in for other positions when needed, establishing a dynamic work environment.</li>
+      </ul>
+      <p><strong>Target</strong> (Jul 2022 – Jun 2023)</p>
+      <p><em>Team Member</em></p>
+      <ul>
+        <li>Worked collaboratively with 4-5 other coworkers to run a small format
+          target location, adapting to sudden changes and assisting wherever necessary.</li>
+        <li>Developed strategies to effectively prepare orders for guests by managing time,
+          working with others and leveraging any resources necessary, improving order pick up times.</li>
+      </ul>
+      <p><strong>Comics Adventure</strong> (Mar 2021 – Jul 2023)</p>
+      <p><em>Store Associate</em></p>
+      <ul>
+        <li>Demonstrated leadership by running a comic shop with one other employee,
+          taking on shop upkeep and customer service with a positive and hard-working mindset.</li>
+        <li>Proved to be adaptable by continuously taking on several tasks each day, including organizing,
+          packaging and labeling, resulting in a cleaner and more organized environment.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Skills & Interests</h2>
+      <p><strong>Skills:</strong> Excel, Tableau, DaVinci Resolve 18, HTML, CSS, JavaScript, Intermediate Japanese,
+        Basic Spanish<br>
+        <strong>Interests:</strong> Video Editing, Guitar/Bass, Bouldering, Traveling, Music Production
+      </p>
+    </div>
+  </div>
 
   <footer>
-    &copy; 2025 Nate Treat
+    &copy; 2025 NATE TREAT
   </footer>
 
-  <script src="resume.css"></script>
+  <script src="resume.js"></script>
 </body>
+
 </html>
