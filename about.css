@@ -16,7 +16,7 @@
 
 /* Body styles: set background image and general text styles */
 body {
-  background-image: url('about.jpg');
+  background-image: url('ned.jpg');
   /* Set background image */
   background-size: cover;
   /* Ensure the image covers the whole viewport */
@@ -28,7 +28,9 @@ body {
   background-repeat: no-repeat;
 
   /* Prevent image tiling */
-  color: #333;
+  color: #ffffff;
+  text-shadow: 0 1px 8px rgba(255, 253, 253, 0.52);
+
   /* Default text color */
   line-height: 1.6;
   margin-bottom: 0rem;
@@ -36,7 +38,7 @@ body {
 
 /* Navigation bar styles */
 nav {
-  background-color: #4e4e4e38;
+  background-color: #0e0e0e94;
   /* Slightly darker gray for navbar */
   padding: 1rem 2rem;
   /* Space inside navbar */
@@ -61,11 +63,12 @@ nav .logo {
   /* Larger font for logo */
   font-weight: 600;
   /* Bold logo */
+  text-shadow: 0 1px 8px rgba(255, 253, 253, 0.52);
 }
 
 nav .logo:hover {
   cursor: pointer;
-  color: #eaf6fd
+  color: #139e06
     /* Change cursor to pointer on hover */
 }
 
@@ -83,7 +86,7 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   /* Remove underline */
-  color: #333;
+  color: #fffdfd;
   /* Link color */
   transition: color 0.3s ease;
   /* Smooth color transition on hover */
@@ -91,7 +94,7 @@ nav ul li a {
 
 /* Navigation link hover effect */
 nav ul li a:hover {
-  color: #eaf6fd;
+  color: #34a508;
   /* Change color on hover */
 }
 
@@ -128,12 +131,12 @@ section {
   /* Rounded corners */
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
   /* Soft shadow */
-  padding: 3rem 2rem;
+  padding: 1rem 2rem;
   max-width: 700px;
   position: relative;
   margin: 3rem auto;
   margin-right: 4cm;
-  margin-top: 9rem;
+  margin-top: 6.5rem;
   /* Center horizontally */
   color: #f8f8f8;
   /* White text color */
