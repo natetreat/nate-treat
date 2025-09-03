@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NATE TREAT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="content.css">
 </head>
+
 <body>
   <nav>
     <div class="logo" onclick="window.location.href='index.html'">NATE TREAT</div>
@@ -14,68 +18,65 @@
       <li>
         <a href="#about" onclick="window.location.href='about.html'; return false;">ABOUT</a>
       </li>
-      <li><a href="#projects" onclick="window.location.href='content.html'; return false;">CONTENT</a></li>
-      <li><a href="#contact" onclick="window.location.href='contact.html'; return false;">CONTACT</a></li>
-      <li><a href="#resume" onclick="window.location.href='resume.html'; return false;" >RESUME</a></li>
+      <li><a href="#gallery" onclick="window.location.href='content.html'; return false;">GALLERY</a></li>
+      <li><a href="#resume" onclick="window.location.href='resume.html'; return false;">RESUME</a></li>
     </ul>
   </nav>
 
-  <header>
-    <h1>CONTENT</h1>
-  </header>>
-  <div class="gallery">
-    <div class="card">
-      <img src="family.jpg" alt="Video 1 Thumbnail">
-      <div class="card-content">
-        <h3>"family"</h3>
-        <p>“Life happens wherever you are, whether you make it or not.” - Uncle Iroh </p>
-        <a href="https://example.com/video1" target="_blank">Watch Video</a>
+  <section class="youtube-section" id="youtube">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rFWH_-bPMHE" frameborder="0"
+      allowfullscreen></iframe>
+    <br>
+    <button onclick="window.open('https://www.youtube.com/@natetreat05')">YOUTUBE</button>
+  </section>
+
+  <section class="gallery-container" id="gallery">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="robmo.jpg" alt="Photo 1">
+      </div>
+      <div class="gallery-item">
+        <img src="building.JPG" alt="Photo 2">
+
+      </div>
+      <div class="gallery-item">
+        <img src="monke.JPG" alt="Photo 3">
+
+      </div>
+      <div class="gallery-item">
+        <img src="rob.JPG" alt="Photo 4">
+
+      </div>
+      <div class="gallery-item">
+        <img src="mo.jpg" alt="Photo 5">
+
+      </div>
+      <div class="gallery-item">
+        <img src="snow day.jpg" alt="Photo 6">
+
+      </div>
+      <div class="gallery-item">
+        <img src="seattle.jpg" alt="Photo 7">
+
+      </div>
+      <div class="gallery-item">
+        <img src="field.JPG" alt="Photo 8">
+
+      </div>
+      <div class="gallery-item">
+        <img src="van.JPG" alt="Photo 9">
+
+      </div>
+      <div class="gallery-item">
+        <img src="sunset.JPG" alt="Photo 10">
+
       </div>
     </div>
-    <div class="card">
-      <img src="resolution.jpg" alt="Video 2 Thumbnail">
-      <div class="card-content">
-        <h3>"resolution"</h3>
-        <p>“At my core—at my center—I have nothing but love for this world.”</p>
-        <a href="https://example.com/video2" target="_blank">Watch Video</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="bali.jpg" alt="Video 3 Thumbnail">
-      <div class="card-content">
-        <h3>bali</h3>
-        <p>I know I get no views anyway but this edit is so underrated</p>
-        <a href="https://example.com/video3" target="_blank">Watch Video</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="japan.jpg" alt="Video 4 Thumbnail">
-      <div class="card-content">
-        <h3>japan</h3>
-        <p>これからもっと日本語を勉強しているようにします</p>
-        <a href="https://example.com/video4" target="_blank">Watch Video</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="snow day.jpg" alt="Video 5 Thumbnail">
-      <div class="card-content">
-        <h3>"it's always the end"</h3>
-        <p>Shot, edited and snowed in the same day. Beauty.</p>
-        <a href="https://example.com/video5" target="_blank">Watch Video</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="seattle.jpg" alt="Video 6 Thumbnail">
-      <div class="card-content">
-        <h3>"sunny day in seattle"</h3>
-        <p>What are the odds?</p>
-        <a href="https://example.com/video6" target="_blank">Watch Video</a>
-      </div>
-    </div>
-  </div>
+  </section>
   <footer>
     &copy; 2025 NATE TREAT
   </footer>
 </body>
 <script src="content.js"></script>
+
 </html>

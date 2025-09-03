@@ -45,6 +45,7 @@ nav .logo {
   font-weight: 600;
   /* Bold logo */
   color: #ffffff;
+  text-shadow: 0 1px 8px rgba(255, 253, 253, 0.52);
 }
 
 /* Logo hover effect */
@@ -73,6 +74,7 @@ nav ul li a {
   /* Link color */
   transition: color 0.3s ease;
   /* Smooth color transition on hover */
+  text-shadow: 0 1px 8px rgba(255, 253, 253, 0.52);
 }
 
 /* Navigation link hover effect */
@@ -81,128 +83,82 @@ nav ul li a:hover {
   /* Change color on hover */
 }
 
-/* Header section styles */
-header {
-  display: flex;
-  /* Use flexbox for alignment */
-  flex-direction: column;
-  /* Stack children vertically */
-  justify-content: center;
-  /* Center vertically in available space */
-  align-items: center;
-  /* Center content horizontally */
-  min-height: 40vh;
-  /* Take up at least 40% of viewport height */
-  padding: 4rem 2rem;
-  /* Space around header */
-  margin: 0 auto;
-  /* Center header with the page */
-  text-align: center;
-  /* Center text */
-  margin-top: 0rem;
-  /* Space from the top */
-}
-
-/* Main header (h1) styles */
-header h1 {
-  font-size: 5rem;
-  /* Large font size for main title */
-  margin-bottom: 0rem;
-  /* Space below h1 */
-  text-shadow: 2px 4px 12px rgba(255, 255, 255, 0.863);
-  /* Light shadow for depth */
-  color: #ffffff;
-  /* White text color */
-  font-family: 'Manrope', sans-serif;
-  /* Use Satoshi font for header */
-  outline: #000000;
-  /* Outline color (not visible unless outline-style is set) */
-  outline-width: 2rem;
-  /* Outline width (not visible unless outline-style is set) */
-}
-
-/* Body styles for main content */
 body {
-  background-image: url(content.JPG);
+  background-image: url('content.JPG');
   background-size: cover;
-  /* Cover entire viewport */
   background-position: center;
-  /* Center the background image */
-  background-position: fixed;
-  /* Keep background fixed on scroll */
   background-repeat: no-repeat;
-  /* Prevent image tiling */
-  /* Keep background fixed on scroll */
-  font-family: Arial, sans-serif;
-  /* Fallback font for body */
-  margin: 0;
-  padding: 20px;
-  /* Space around body content */
-  background-color: #f4f4f4;
-  /* Light gray background */
+  /* Light gray background for the entire page */
+  color: #333;
+  /* Dark text color for readability */
+  line-height: 1.6;
+  /* Improved line spacing */
+  padding-top: 70px;
+  /* Space for fixed navbar */
 }
 
-/* Gallery grid styles */
+.youtube-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.youtube-section iframe {
+  width: 51%;
+  height: 515px;
+  border-radius: 12px;
+  border: none;
+}
+
+.youtube-section button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #ff0000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.gallery-container {
+  max-height: 70vh;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-  gap: 50px 200px;
-  max-width: 1400px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
 }
 
-.column {
-  flex: 0 0 48%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.card {
-  display: flex;
-  background-color: #fff;
-  border-radius: 10px;
+.gallery-item {
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  border-radius: 10px;
 }
 
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card img {
-  width: 40%;
-  height: auto;
+.gallery-item img {
+  width: 100%;
+  height: 180px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.card-content {
-  padding: 15px;
-  flex: 1;
+.gallery-item:hover img {
+  transform: scale(1.1);
 }
 
-.card h3 {
-  margin-top: 0;
-  font-family: 'Inter', sans-serif;
-}
-
-.card p {
-  color: #555;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.card a:hover {
-  text-decoration: underline;
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
 }
 
 /* Footer styles */
